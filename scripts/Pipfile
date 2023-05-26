@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyserial = "*"
+opencv-python = "==4.1.0.25"
+opencv-contrib-python = "==4.1.0.25"
+opencv-python-headless = "==4.1.0.25"
+
+[dev-packages]
+
