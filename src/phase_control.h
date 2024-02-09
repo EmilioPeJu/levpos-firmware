@@ -3,15 +3,12 @@
 
 #include <stdint.h>
 
-#define PHASE_LOW 0
 #define PHASE_N 400
+#define PHASE_LOW 0
 #define PHASE_MID 200
+#define PHASE_HIGH (PHASE_N - 1)
 
 void phase_control_set_speed(int16_t val);
-
-void phase_control_set_increment(int16_t val);
-
-void phase_control_set_phase(int16_t val);
 
 void phase_control_step();
 
