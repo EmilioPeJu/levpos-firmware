@@ -39,36 +39,6 @@ static bool reset_command(char *args)
     return true;
 }
 
-static bool set_increment_command(char *args)
-{
-        int16_t inc = 0;
-        int nargs = sscanf(args, "%" PRIi16, &inc);
-        if (nargs != 1) {
-                printf("ERR Invalid format\r\n");
-                return false;
-        }
-
-        phase_control_set_increment(inc);
-        printf("OK\r\n");
-
-        return true;
-}
-
-static bool set_phase_command(char *args)
-{
-        int16_t phase = 0;
-        int nargs = sscanf(args, "%" PRIi16, &phase);
-        if (nargs != 1) {
-                printf("ERR Invalid format\r\n");
-                return false;
-        }
-
-        phase_control_set_phase(phase);
-        printf("OK\r\n");
-
-        return true;
-}
-
 static bool set_speed_command(char *args)
 {
         int16_t speed = 0;
@@ -86,8 +56,6 @@ static bool set_speed_command(char *args)
 
 struct command_description command_table[] = {
     {"help", help_command, "Generates a command list"},
-    {"i", set_increment_command, "Set increment in phase"},
-    {"p", set_phase_command, "Set phase"},
     {"ping", ping_command, "Return a pong"},
     {"reset", reset_command, "Reset MCU"},
     {"s", set_speed_command, "Set speed"}
