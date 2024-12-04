@@ -5,7 +5,7 @@
 #include "phase_control.h"
 
 static int16_t step = 0;
-static const uint16_t SOFT_PSC = 4;
+static const uint16_t SOFT_PSC = 8;
 
 void phase_control_set_speed(int16_t val)
 {
